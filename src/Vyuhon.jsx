@@ -7,6 +7,16 @@ fontLink.href =
   "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Instrument+Serif:ital@0;1&display=swap";
 document.head.appendChild(fontLink);
 
+/* ─── FAVICON injected once ─── */
+const faviconLink = document.querySelector("link[rel~='icon']") || document.createElement("link");
+faviconLink.rel = "icon";
+faviconLink.type = "image/svg+xml";
+faviconLink.href = "/favicon.svg";
+if (!document.head.contains(faviconLink)) {
+  document.head.appendChild(faviconLink);
+}
+
+
 /* ─── GLOBAL STYLES ─── */
 const globalCSS = `
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
